@@ -17,8 +17,48 @@ Your login name: altschool i.e., home directory /home/altschool. The home direct
 12. Disable password-based authentication for ssh
 13. Disable root login for ssh
 
-Mode of submission:
-
-you are going to push the required commands to your github repositories.
+**Mode of submission:**
+You are going to push the required commands to your github repositories.
 
 Deadline: 10th Feb 2024
+
+## Solution
+1. Change directory to the tests directory using absolute pathname
+```cd /home/altschool/tests```
+![Change directory to the tests directory using absolute pathname](/Images/1.png)
+2. Change directory to the tests directory using relative pathname
+```cd ./tests```
+![Change directory to the tests directory using relative pathname](/Images/2.png)
+3. Use echo command to create a file named fileA with text content ‘Hello A’ in the misc directory
+```echo "Hello A" > fileA```
+![Use echo command to create a file named fileA with text content ‘Hello A’ in the misc directory](/Images/3.png)
+4. Create an empty file named fileB in the misc directory. Populate the file with dummy content afterward
+```echo > fileB```
+![Create an empty file named fileB in the misc directory. Populate the file with dummy content afterward](/Images/4.png)
+5. Copy contents of fileA into fileC
+```sudo cp fileA fileC```
+![Copy contents of fileA into fileC](/Images/5.png)
+6. Move contents of fileB into fileD
+```mv fileB fileD```
+![Move contents of fileB into fileD](/Images/6.png)
+7. Create a tar archive called misc.tar for the contents of misc directory
+```sudo tar -cvf misc.tar ./misc```
+![Change directory to the tests directory using absolute pathname](/Images/7.png)
+8. Compress the tar archive to create a misc.tar.gz file
+```sudo gzip misc.tar```
+![Compress the tar archive to create a misc.tar.gz file](/Images/8.png)
+9. Create a user and force the user to change his/her password upon login
+```sudo useradd piano && sudo passwd --expire piano```
+![Create a user and force the user to change his/her password upon login](/Images/9.png)
+10. Lock a user's password
+```sudo passwd --lock piano```
+![Lock a user's password](/Images/10.png)
+11. Create a user with no login shell
+```sudo adduser --system --no-create-home --shell /usr/bin/nologin amapiano```
+![Create a user with no login shell](/Images/11.png)
+12. Disable password-based authentication for ssh
+```sudo nano /etc/ssh/sshd_config && sudo systemctl restart sshd```
+![Disable password-based authentication for ssh](/Images/12.png)
+13. Disable root login for ssh
+```sudo nano /etc/ssh/sshd_config && sudo systemctl restart sshd```
+![Disable root login for ssh](/Images/12.png)
