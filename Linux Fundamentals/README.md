@@ -55,10 +55,10 @@ Deadline: 10th Feb 2024
 ![Lock a user's password](Images/10.PNG)
 11. Create a user with no login shell
 ```sudo adduser --system --no-create-home --shell /usr/bin/nologin amapiano```
-![Create a user with no login shell](Images/11.PNG)
+![Create a user with no login shell](Images/10.PNG)
 12. Disable password-based authentication for ssh
 ```sudo nano /etc/ssh/sshd_config && sudo systemctl restart sshd```
-![Disable password-based authentication for ssh](Images/12.PNG)
+![Disable password-based authentication for ssh](Images/11.PNG)
 13. Disable root login for ssh
 ```sudo nano /etc/ssh/sshd_config && sudo systemctl restart sshd```
 ![Disable root login for ssh](Images/12.PNG)
